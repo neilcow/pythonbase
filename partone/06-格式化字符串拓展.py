@@ -9,4 +9,4 @@ stu_id = 1
 stu_id2 = 12234
 
 # 我的名字是xxx，我的年龄是xxx， 体重是xxx
-print('我的名字是%s，我的年龄是%s， 体重是%s' %(name, age, weight))
+print('我的名字是%s，我的年龄是%s， 体重是%s' % (name, age, weight))
