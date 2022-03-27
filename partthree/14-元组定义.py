@@ -1,0 +1,10 @@
+tuple1 = (0, 1, 2, 3, 4)
+print(tuple1)
+print(type(tuple1))
+
+t2 = (1,)
+print(type(t2))
+t3 = (2)
+print(type(t3))
+t4 = ('hello')
+print(type(t4))
