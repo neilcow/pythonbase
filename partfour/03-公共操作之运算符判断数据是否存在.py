@@ -7,3 +7,4 @@ print('1' in str1)
 print('2' in list1)
 print(3 in t1)
 print('name' in dict1)
+
