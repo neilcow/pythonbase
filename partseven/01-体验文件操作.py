@@ -1,0 +1,6 @@
+# 1、打开文件 open()
+f = open('test.txt', 'w')
+# 2、读写操作 write()  read()
+f.write('aaaaa')
+# 3、关闭文件 close()
+f.close()
