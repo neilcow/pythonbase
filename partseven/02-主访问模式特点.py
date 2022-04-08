@@ -17,3 +17,7 @@ f.close()
 f = open('2.txt', 'a')
 f.write('dddd')
 f.close()
+
+# 访问模式参数是否可以省略,可以省略，省略表示访问模式为 r
+f = open('1.txt')
+f.close()
