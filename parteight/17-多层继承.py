@@ -34,9 +34,13 @@ class Apprentice(School, Master):
         School.make_cake(self)
 
 
-pancake = Apprentice()
+class TuSun(Apprentice):
+    pass
+
+
+pancake = TuSun()
 # print(pancake.gongfu)
 pancake.make_cake()
-pancake.make_Master_cake()
-pancake.make_School_cake()
+pancake.make_master_cake()
+pancake.make_school_cake()
 pancake.make_cake()

@@ -6,17 +6,20 @@ class Master(object):
         print(f'师傅教的摊煎饼{self.gongfu}')
 
 
-class School(object):
+class School(Master):
     def __init__(self):
         self.gongfu = '学校学习摊煎饼'
 
     def make_cake(self):
         print(f'学校学习的摊煎饼{self.gongfu}')
+        super(School, self).__init__()
+        super(School, self).make_cake()
 
 
-class Apprentice(School, Master):
+class Apprentice(School):
     def __init__(self):
         self.gongfu = '这是徒弟自创的摊煎饼技术'
+        self.__monkey = 10000
 
     # 注意 要调用一次 子类的初始化方法，保证每次是子类的初始化属性，并且不用传self
     def make_cake(self):
@@ -33,10 +36,32 @@ class Apprentice(School, Master):
         School.__init__(self)
         School.make_cake(self)
 
+    def make_old_cake(self):
+        super(Apprentice, self).__init__()
+        super(Apprentice, self).make_cake()
+
+    def make_new_cake(self):
+        super().__init__()
+        super().make_cake()
+
+    def __print_info(self):
+        self.__init__()
+        print('我是私有方法')
+
+    def get_monkey(self):
+        return self.__monkey
+
+    def set_monkey(self):
+        self.__monkey = 22222
+
 
 pancake = Apprentice()
 # print(pancake.gongfu)
-pancake.make_cake()
-pancake.make_Master_cake()
-pancake.make_School_cake()
-pancake.make_cake()
+print(pancake.get_monkey())
+pancake.set_monkey()
+print(pancake.get_monkey())
+
+# 输出
+# 10000
+# 22222
+
